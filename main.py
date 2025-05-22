@@ -1,6 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
-from reddit.reddit_scraper import RedditScraper
+from reddit_scraper import RedditScraper
+
 
 app = FastAPI()
 
