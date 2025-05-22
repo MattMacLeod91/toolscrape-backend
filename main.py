@@ -1,7 +1,15 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from reddit_scraper import RedditScraper
+from fastapi.middleware.cors import CORSMiddleware
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Or restrict to Lovable's origin
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 app = FastAPI()
 
