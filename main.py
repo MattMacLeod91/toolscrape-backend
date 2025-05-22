@@ -3,6 +3,7 @@ from pydantic import BaseModel
 from reddit_scraper import RedditScraper
 from fastapi.middleware.cors import CORSMiddleware
 
+app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # Or restrict to Lovable's origin
@@ -11,7 +12,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app = FastAPI()
+
 
 class ScrapeRequest(BaseModel):
     config: dict
